@@ -1,0 +1,74 @@
+<footer>
+    <style>
+  footer {
+    background-color: #f8f9fa;
+    padding: 1.5rem 1rem;
+    border-top: 1px solid #dee2e6;
+  }
+
+  .f-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    font-size: 0.9rem;
+    gap: 1rem;
+  }
+
+  .f-info-socials i {
+    margin: 0 0.5rem;
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: #495057;
+  }
+
+  .f-info-brand {
+    flex: 1 1 100%;
+    color: #6c757d;
+  }
+
+  .f-info-links a {
+    margin: 0 0.5rem;
+    text-decoration: none;
+    color: #495057;
+  }
+
+  .f-info-links a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 576px) {
+    .f-info {
+      flex-direction: column;
+      font-size: 0.8rem;
+    }
+
+    .f-info-socials {
+      order: 1;
+    }
+
+    .f-info-brand {
+      order: 2;
+    }
+
+    .f-info-links {
+      order: 3;
+    }
+  }
+</style>
+
+    <div class="f-info">
+        <div class="f-info-socials">
+<i class="fa-brands fa-square-facebook"></i>
+<i class="fa-brands fa-square-instagram"></i>
+<i class="fa-brands fa-linkedin"></i>
+        </div>
+        <div class="f-info-brand"> &copy; Wanderlust private Limited</div>
+        <div class="f-info-links">
+            <a href="/privacy">Privacy</a>
+            <a href="/terms">Terms</a>
+
+        </div>
+    </div>
+</footer>
