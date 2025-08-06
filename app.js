@@ -1,7 +1,7 @@
 if(process.env.NODE_ENV != "production") {
    require("dotenv").config(); 
 }
-//console.log(process.env.SECRET);
+
 
 const express = require("express");
 const app = express();
@@ -86,11 +86,9 @@ app.use((req, res, next) => {
 app.use("/listings", listingRouter);
 app.use("/listings/:id/reviews", reviewRouter);
 app.use("/", UserRouter);
-/* app.all("*", (req, res, next) => {
-    next(new ExpressError(404, "Page Not Found"));
-});  */
-
-// Error handler middleware
+app.get("/", (req, res) => {
+    res.redirect("/listings");  // or render homepage if you have one
+});
 app.use((err, req, res, next) => {
     let { statusCode = 500, message = "Something went wrong!" } = err;
     res.status(statusCode).send(message);
